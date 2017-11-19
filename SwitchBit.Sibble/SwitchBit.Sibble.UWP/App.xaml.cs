@@ -60,6 +60,8 @@ namespace SwitchBit.Sibble.UWP
 
                 Xamarin.Forms.Forms.Init(e);
 
+                _ = new Syncfusion.SfChart.XForms.UWP.SfChartRenderer();
+
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
                     //TODO: Load state from previously suspended application

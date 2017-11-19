@@ -23,6 +23,9 @@ namespace SwitchBit.Sibble.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+
+            _ = new Syncfusion.SfChart.XForms.iOS.Renderers.SfChartRenderer();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

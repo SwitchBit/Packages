@@ -2,12 +2,81 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:SwitchBit.Sibble"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:list="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
              x:Class="SwitchBit.Sibble.MainPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid BackgroundColor="Black">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+                
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="350"/>
+                <RowDefinition Height="35"/>
+            </Grid.RowDefinitions>
+
+            <Grid.BindingContext>
+                <local:ViewModel />
+            </Grid.BindingContext>
+            
+            <list:SfListView Grid.Row="0" Grid.Column="1" x:Name="BagsList" ItemsSource="{Binding Data}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <list:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="0,20,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="{Binding Name}" FontAttributes="Bold" TextColor="Teal" FontSize="Small" />
+                            <Label Grid.Column="1" Text="{Binding PercentPortfolio}" TextColor="Teal" FontSize="Small"/>
+                            <Label Grid.Column="2" Text="{Binding Amount}" TextColor="Teal" FontSize="Small"/>
+                            <Label Grid.Column="3" Text="{Binding Exchange}" TextColor="#336699" FontSize="Small"/>
+                        </Grid>
+                    </DataTemplate>
+                </list:SfListView.ItemTemplate>
+            </list:SfListView>
+            
+            <chart:SfChart Grid.Row="1" Grid.Column="1" x:Name="Chart" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsEnabled="True" IsVisible="True">
+
+                <chart:SfChart.Legend>
+                    <chart:ChartLegend />
+                </chart:SfChart.Legend>
+
+                <chart:SfChart.Title>
+                    <chart:ChartTitle Text="My Bags"/>
+                </chart:SfChart.Title>
+
+                <chart:SfChart.PrimaryAxis>
+                    <chart:CategoryAxis>
+                        <chart:CategoryAxis.Title>
+                            <chart:ChartAxisTitle Text="Currency"></chart:ChartAxisTitle>
+                        </chart:CategoryAxis.Title>
+                    </chart:CategoryAxis>
+                </chart:SfChart.PrimaryAxis>
+
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis>
+                        <chart:NumericalAxis.Title>
+                            <chart:ChartAxisTitle Text="Percentage"></chart:ChartAxisTitle>
+                        </chart:NumericalAxis.Title>
+                    </chart:NumericalAxis>
+                </chart:SfChart.SecondaryAxis>
+
+                <chart:SfChart.Series>
+                    <chart:ColumnSeries ItemsSource="{Binding Data}" Label="My Bags" XBindingPath="Name" YBindingPath="PercentPortfolio" EnableTooltip="True">
+                        <chart:ColumnSeries.DataMarker>
+                            <chart:ChartDataMarker/>
+                        </chart:ColumnSeries.DataMarker>
+                    </chart:ColumnSeries>
+                </chart:SfChart.Series>
+            </chart:SfChart>
+        </Grid>
+        
     </ContentPage.Content>
 </ContentPage>
