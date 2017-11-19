@@ -13,7 +13,7 @@ namespace SwitchBit.Sibble
         {
             InitializeComponent();
 
-            MainPage = new SwitchBit.Sibble.MainPage();
+            MainPage = new NavigationPage(new SwitchBit.Sibble.MainPage());
         }
 
         protected override void OnStart()

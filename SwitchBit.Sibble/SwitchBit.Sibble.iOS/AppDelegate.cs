@@ -25,6 +25,7 @@ namespace SwitchBit.Sibble.iOS
             global::Xamarin.Forms.Forms.Init();
 
             _ = new Syncfusion.SfChart.XForms.iOS.Renderers.SfChartRenderer();
+            _ = new Syncfusion.SfGauge.XForms.iOS.SfGaugeRenderer();
 
             LoadApplication(new App());
 

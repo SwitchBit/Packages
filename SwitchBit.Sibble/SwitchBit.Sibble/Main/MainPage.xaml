@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SwitchBit.Sibble"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:list="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:menu="clr-namespace:Syncfusion.SfRadialMenu.XForms;assembly=Syncfusion.SfRadialMenu.XForms"
+             x:Class="SwitchBit.Sibble.MainPage">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#336699">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+                
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="350"/>
+                <RowDefinition Height="35"/>
+            </Grid.RowDefinitions>
+
+            <Grid.BindingContext>
+                <local:MainPageViewModel />
+            </Grid.BindingContext>
+
+            <menu:SfRadialMenu Grid.Column="1" Grid.Row="0" 
+                               CenterButtonText="\uE713" CenterButtonBackText="\uE72B" 
+                               CenterButtonFontFamily="Segoe MDL2 Assets.ttf" 
+                               CenterButtonRadius="32">
+                <menu:SfRadialMenu.Items>
+                    <menu:SfRadialMenuItem Text="Settings"
+                        BackgroundColor="#6699CC" TextColor="#336699"/>
+                </menu:SfRadialMenu.Items>
+            </menu:SfRadialMenu>
+            
+            <ScrollView Grid.Row="1" Grid.Column="1">
+                <list:SfListView x:Name="BagsList" 
+                             BackgroundColor="White" ItemsSource="{Binding Data}" 
+                             VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <list:SfListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding Name}" 
+                                   FontAttributes="Bold" TextColor="#141414" FontSize="Small" />
+                                <Label Grid.Column="1" Text="{Binding PercentPortfolio}" 
+                                   TextColor="#141414" FontSize="Small"/>
+                                <Label Grid.Column="2" Text="{Binding Amount}" 
+                                   TextColor="#141414" FontSize="Small"/>
+                                <Label Grid.Column="3" Text="{Binding Exchange}" 
+                                   TextColor="#336699" FontSize="Small"/>
+                            </Grid>
+                        </DataTemplate>
+                    </list:SfListView.ItemTemplate>
+                </list:SfListView>
+            </ScrollView>
+            
+            <chart:SfChart Grid.Row="2" Grid.Column="1" x:Name="Chart" 
+                           BackgroundColor="White" 
+                           HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                           IsEnabled="True" IsVisible="True">
+
+                <chart:SfChart.Legend>
+                    <chart:ChartLegend />
+                </chart:SfChart.Legend>
+
+                <chart:SfChart.Title>
+                    <chart:ChartTitle Text="My Bags"/>
+                </chart:SfChart.Title>
+
+                <chart:SfChart.PrimaryAxis>
+                    <chart:CategoryAxis>
+                        <chart:CategoryAxis.Title>
+                            <chart:ChartAxisTitle Text="Currency"></chart:ChartAxisTitle>
+                        </chart:CategoryAxis.Title>
+                    </chart:CategoryAxis>
+                </chart:SfChart.PrimaryAxis>
+
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis>
+                        <chart:NumericalAxis.Title>
+                            <chart:ChartAxisTitle Text="Percentage"></chart:ChartAxisTitle>
+                        </chart:NumericalAxis.Title>
+                    </chart:NumericalAxis>
+                </chart:SfChart.SecondaryAxis>
+
+                <chart:SfChart.Series>
+                    <chart:ColumnSeries ItemsSource="{Binding Data}" Label="My Bags" XBindingPath="Name" YBindingPath="PercentPortfolio" EnableTooltip="True">
+                        <chart:ColumnSeries.DataMarker>
+                            <chart:ChartDataMarker/>
+                        </chart:ColumnSeries.DataMarker>
+                    </chart:ColumnSeries>
+                </chart:SfChart.Series>
+            </chart:SfChart>
+
+            <StackLayout Orientation="Horizontal" Margin="0"
+                Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" >
+                <Button Text="Chains" WidthRequest="75"
+                        TextColor="White" BackgroundColor="#225588"
+                        Command="{Binding ChainsCommand}"/>
+                <Button Text="Movers" WidthRequest="75"
+                        TextColor="White" BackgroundColor="#225588"
+                        Command="{Binding MoversCommand}"/>
+            </StackLayout>
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

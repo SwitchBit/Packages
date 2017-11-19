@@ -18,7 +18,7 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
     <JavaMaximumHeapSize />
@@ -75,15 +75,6 @@
     <Reference Include="Syncfusion.OfficeChart.Portable, Version=15.4451.0.17, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Syncfusion.Xamarin.OfficeChart.15.4.0.17\lib\MonoAndroid10\Syncfusion.OfficeChart.Portable.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.SfCarousel.Android, Version=15.4451.0.17, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.SfCarousel.Android.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfCarousel.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfCarousel.XForms, Version=15.4451.0.17, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.SfCarousel.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfCarousel.XForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfCarousel.XForms.Android, Version=15.4451.0.17, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.SfCarousel.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfCarousel.XForms.Android.dll</HintPath>
-    </Reference>
     <Reference Include="Syncfusion.SfChart.Android, Version=15.4451.0.17, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Syncfusion.Xamarin.SfChart.Android.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfChart.Android.dll</HintPath>
     </Reference>
@@ -104,15 +95,6 @@
     </Reference>
     <Reference Include="Syncfusion.SfDataGrid.XForms.Android, Version=15.4451.0.17, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Syncfusion.Xamarin.SfDataGrid.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfDataGrid.XForms.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfGauge.Android, Version=15.4451.0.17, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.SfGauge.Android.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfGauge.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfGauge.XForms, Version=15.4451.0.17, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.SfGauge.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfGauge.XForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.SfGauge.XForms.Android, Version=15.4451.0.17, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Syncfusion.Xamarin.SfGauge.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfGauge.XForms.Android.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfListView.XForms, Version=15.4451.0.17, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Syncfusion.Xamarin.SfListView.15.4.0.17\lib\MonoAndroid10\Syncfusion.SfListView.XForms.dll</HintPath>

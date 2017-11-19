@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SwitchBit.Sibble.Movers"
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             x:Class="SwitchBit.Sibble.Movers.MoversPage">
+    <ContentPage.BindingContext>
+        <local:MoversPageViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding MoversData}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="{Binding TickerSymbol}"
+                               Grid.Column="0"/>
+                        <gauge:SfCircularGauge Grid.Column="4">
+                            <gauge:SfCircularGauge.Scales>
+                                <gauge:Scale StartAngle="135" StartValue="0" EndValue="100" 
+                                             Interval="10" SweepAngle="270"
+                                             RimThickness="4" RimColor="Gray">
+                                </gauge:Scale>
+                            </gauge:SfCircularGauge.Scales>
+                        </gauge:SfCircularGauge>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
