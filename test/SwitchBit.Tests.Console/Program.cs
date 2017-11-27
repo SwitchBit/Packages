@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace SwitchBit.Tests.Console
+namespace SwitchBit.Tests
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
