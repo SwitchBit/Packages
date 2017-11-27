@@ -1,0 +1,3 @@
+# Testing Package Projects
+
+How to execute the tests for each package for now...
