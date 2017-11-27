@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchBit.Connectivity.GitHub", "src\SwitchBit.Connectivity.GitHub\SwitchBit.Connectivity.GitHub.csproj", "{14196EE9-8B89-4FBB-AF2F-B90F6F85A8F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchBit.Xaml", "src\SwitchBit.Xaml\SwitchBit.Xaml.csproj", "{052DD6B4-C7B7-4CD9-8AE9-561C84D7EE60}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchBit.Web.Jwt", "src\SwitchBit.Web.Jwt\SwitchBit.Web.Jwt.csproj", "{6436A993-CCFC-4485-B0C0-94B54980AC0A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchBit.Xaml.Xamarin", "src\SwitchBit.Xaml.Xamarin\SwitchBit.Xaml.Xamarin.csproj", "{B9A1FA51-D4A8-4BA5-962B-4106121EDD20}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchBit.Extensibility", "src\SwitchBit.Extensibility\SwitchBit.Extensibility.csproj", "{3A8F1F70-E219-45C8-94EA-469159AD6D9E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{A64E6A3C-29B3-4D9A-82B2-3563ACDFD51D}"
+	ProjectSection(SolutionItems) = preProject
+		build\SwitchBit.Packages.props = build\SwitchBit.Packages.props
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14196EE9-8B89-4FBB-AF2F-B90F6F85A8F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14196EE9-8B89-4FBB-AF2F-B90F6F85A8F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14196EE9-8B89-4FBB-AF2F-B90F6F85A8F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14196EE9-8B89-4FBB-AF2F-B90F6F85A8F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{052DD6B4-C7B7-4CD9-8AE9-561C84D7EE60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{052DD6B4-C7B7-4CD9-8AE9-561C84D7EE60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{052DD6B4-C7B7-4CD9-8AE9-561C84D7EE60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{052DD6B4-C7B7-4CD9-8AE9-561C84D7EE60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6436A993-CCFC-4485-B0C0-94B54980AC0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6436A993-CCFC-4485-B0C0-94B54980AC0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6436A993-CCFC-4485-B0C0-94B54980AC0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6436A993-CCFC-4485-B0C0-94B54980AC0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9A1FA51-D4A8-4BA5-962B-4106121EDD20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9A1FA51-D4A8-4BA5-962B-4106121EDD20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9A1FA51-D4A8-4BA5-962B-4106121EDD20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9A1FA51-D4A8-4BA5-962B-4106121EDD20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A8F1F70-E219-45C8-94EA-469159AD6D9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A8F1F70-E219-45C8-94EA-469159AD6D9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A8F1F70-E219-45C8-94EA-469159AD6D9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A8F1F70-E219-45C8-94EA-469159AD6D9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2AEBEB71-6761-4835-BA05-6FC01805B178}
+	EndGlobalSection
+EndGlobal

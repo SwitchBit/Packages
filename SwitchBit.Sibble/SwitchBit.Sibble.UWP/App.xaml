@@ -1,8 +1,0 @@
-﻿<Application
-    x:Class="SwitchBit.Sibble.UWP.App"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:SwitchBit.Sibble.UWP"
-    RequestedTheme="Light">
-
-</Application>
