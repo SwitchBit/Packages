@@ -4,7 +4,7 @@
     <Company>SwitchBit, Inc.</Company>
     <Copyright>Copyright © 2017</Copyright>
     <PackageProjectUrl>https://github.com/switchbit</PackageProjectUrl>
-    <PackageIconUrl>https://github.com/switchbit/assets/switchbit-nuget-icon.png</PackageIconUrl>
+    <PackageIconUrl>https://github.com/switchbit/packages/assets/switchbit-nuget-icon.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/switchbit</RepositoryUrl>
 	  <AssemblyVersion>0.1.0.0</AssemblyVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
