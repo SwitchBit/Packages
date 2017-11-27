@@ -15,7 +15,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchBit.Extensibility", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{A64E6A3C-29B3-4D9A-82B2-3563ACDFD51D}"
 	ProjectSection(SolutionItems) = preProject
+		build\README.md = build\README.md
 		build\SwitchBit.Packages.props = build\SwitchBit.Packages.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E869D770-B064-4E1E-8F7B-74D968AA404B}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{FB16448E-6F54-4A3C-9D98-3F9DABCC5D20}"
+	ProjectSection(SolutionItems) = preProject
+		test\README.md = test\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{C3E1A050-CA88-4094-BB0C-D5E04AD58F31}"
+	ProjectSection(SolutionItems) = preProject
+		assets\switchbit-nuget-icon.png = assets\switchbit-nuget-icon.png
 	EndProjectSection
 EndProject
 Global
