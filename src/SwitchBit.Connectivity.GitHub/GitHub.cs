@@ -11,7 +11,7 @@ namespace SwitchBit.Connectivity.GitHub
     {
         private const string apiRoot = "https://api.github.com"; //Accept: application/vnd.github.v3+json
 
-        //private string accessToken = "271d3394241fd4ce794fc2b6f92ac5df70810f04"; //TODO: Move this somewhere obviously
+        
         private string oauthToken = string.Empty;
 
         private HttpClient http;
