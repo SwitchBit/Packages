@@ -1,9 +1,10 @@
 ﻿using Newtonsoft.Json.Linq;
+using System.Threading.Tasks;
 
 namespace SwitchBit.Blockchain.Rpc
 {
     public interface IBlockchainRpcClient
     {
-        JObject InvokeMethod(string methodName, params object[] parameters);
+        Task<JObject> InvokeMethod(string methodName, params object[] parameters);
     }
 }
