@@ -2,8 +2,8 @@
 
 There are a couple nuances that need addressed before effectively using the RPC client. One of which is that the `getrawtransaction` method doesn't pull arbitrary transaction data by default anymore. 
 
-## Parsing blocks is slow!
-Asynchronous methods of parsing are being investigated, but aren't a priority since a normalized database should only need seeded with blockchain data one time. Transforming the entire chain at *around* **150GB** (End of November, 2017) takes a few hundred hours initially on a rather beefy machine. 
+## Importing blocks 
+The block import process is parallelized now. In the database, the blocks table is prepopulated with all of the empty records for the chain. The importer pulls all of the then incomplete blocks and works on them individually in multiple processes. 
 
 ## Enabling `getrawtransaction`
 In order for the `getrawtransaction` RPC method to return the indexed transaction info, the blocks' contents need reindexed to include all transaction data. **After v0.8.0.0**, only transactions pertinent to a local wallet are indexed.
